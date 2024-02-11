@@ -1,0 +1,149 @@
+body {
+	background-color: #eee;
+	color: #444;
+	font-family: Arial, sans-serif;
+	text-align: justify;
+}
+
+a {
+	color: grey;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+/* HEADER */
+
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	background-color: #333;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px;
+	height: 37px;
+}
+
+header h1 {
+	margin: 0;
+}
+
+header nav > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+header nav li {
+	margin: 0 8px;
+}
+
+header nav a {
+	color: white;
+	text-decoration: none;
+	font-weight: normal;
+}
+header nav a:hover {
+	text-decoration: underline;
+}
+
+
+/* MAIN */
+
+main {
+	overflow: scroll;
+	position: fixed;
+	top: 69px;				/* 37 + 16*2 */
+	right: 0;
+	bottom: 33px;			/* 18 + 16*2 - 17 */
+	left: 0;
+	padding: 0 0 0 17px;	/* scroll bar width */
+}
+
+section {
+	width: 50%;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	background-color: white;
+}
+
+section h2 {
+	margin-top: 0;
+}
+
+article {
+	margin: 20px 0 0 0;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+article h3 {
+	margin-top: 0;
+}
+
+
+/* FOOTER */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 16px;
+}
+
+footer p {
+	margin: 0;
+}
+
+
+/* MEDIA QUERIES */
+
+/* touch screen */
+@media (hover: none) {
+	main {
+		padding: 0;
+	}
+}
+
+/* smartphone portrait and landscape */
+@media only screen and (((max-width: 320px) and (max-height: 480px) and (orientation: portrait)) or ((max-width: 480px) and (max-height: 320px) and (orientation: landscape))) {
+	main {
+		padding: 0 5px;
+	}
+
+	section {
+		width: calc(100% - 20px);
+		padding: 5px;
+	}
+}
+
+/* small tablet portrait and landscape */
+@media only screen and (((max-width: 600px) and (max-height: 800px) and (orientation: portrait)) or ((max-width: 800px) and (max-height: 600px) and (orientation: landscape))) {
+	main {
+		padding: 0 1px 0 18px;
+	}
+
+	section {
+		width: calc(100% - 36px - 20px);
+		padding: 10px;
+	}
+}
+
+/* tablet portrait and landscape */
