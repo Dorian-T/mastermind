@@ -10,7 +10,6 @@ $links = [
 $headerTitle = 'Mastermind';
 $headerNav = [
 	'<a href="../../">Accueil</a>',
-	'<div><img src="../../assets/icon/help.svg" alt="bouton d\'aide"><span>Choisissez un mode de jeu.</span></div>'
 ];
 ?>
 
